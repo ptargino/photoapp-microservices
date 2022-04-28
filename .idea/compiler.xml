@@ -13,6 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="photoapp-microservices" target="1.5" />
       <module name="PhotoAppApiAccountManagement" target="17" />
       <module name="PhotoAppApiGateway" target="17" />
       <module name="PhotoAppApiUsers" target="17" />
