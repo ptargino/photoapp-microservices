@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PhotoAppApiAccountManagement/PhotoAppApiAccountManagement.iml" filepath="$PROJECT_DIR$/PhotoAppApiAccountManagement/PhotoAppApiAccountManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoAppApiGateway/PhotoAppApiGateway.iml" filepath="$PROJECT_DIR$/PhotoAppApiGateway/PhotoAppApiGateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoAppApiUsers/PhotoAppApiUsers.iml" filepath="$PROJECT_DIR$/PhotoAppApiUsers/PhotoAppApiUsers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoAppDiscoveryService/PhotoAppDiscoveryService.iml" filepath="$PROJECT_DIR$/PhotoAppDiscoveryService/PhotoAppDiscoveryService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/photoapp-microservices.iml" filepath="$PROJECT_DIR$/.idea/photoapp-microservices.iml" />
+    </modules>
+  </component>
+</project>
