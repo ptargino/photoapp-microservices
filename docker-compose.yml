@@ -6,21 +6,39 @@ services:
     build: ./PhotoAppDiscoveryService
     ports:
       - "8010:8010"
-  api-gateway:
-    restart: always
-    build: ./PhotoAppApiGateway
-    image: ptargino/photoapp/api-gateway
-    depends_on:
-      - discovery-service
+    environment:
+      eureka.instance.hostname: discovery-service
+      eureka.client.serviceUrl.defaultZone: http://discovery-service:8010/eureka
   api-users:
     restart: always
     build: ./PhotoAppApiUsers
     image: ptargino/photoapp/api-users
     depends_on:
       - discovery-service
+    ports:
+      - "8011:8011"
+    environment:
+      server.port: 8011
+      eureka.client.serviceUrl.defaultZone: http://discovery-service:8010/eureka
   api-account-management:
     restart: always
     build: ./PhotoAppApiAccountManagement
     image: ptargino/photoapp/api-account-management
     depends_on:
       - discovery-service
+    ports:
+      - "8012:8012"
+    environment:
+      server.port: 8012
+      eureka.client.serviceUrl.defaultZone: http://discovery-service:8010/eureka
+  api-gateway:
+    restart: always
+    build: ./PhotoAppApiGateway
+    image: ptargino/photoapp/api-gateway
+    depends_on:
+      - discovery-service
+    ports:
+      - "8081:8082"
+    environment:
+      server.port: 8082
+      eureka.client.serviceUrl.defaultZone: http://discovery-service:8010/eureka
