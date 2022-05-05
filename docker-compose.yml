@@ -1,0 +1,26 @@
+version: '3'
+services:
+  discovery-service:
+    restart: always
+    image: ptargino/photoapp/discovery-service
+    build: ./PhotoAppDiscoveryService
+    ports:
+      - "8010:8010"
+  api-gateway:
+    restart: always
+    build: ./PhotoAppApiGateway
+    image: ptargino/photoapp/api-gateway
+    depends_on:
+      - discovery-service
+  api-users:
+    restart: always
+    build: ./PhotoAppApiUsers
+    image: ptargino/photoapp/api-users
+    depends_on:
+      - discovery-service
+  api-account-management:
+    restart: always
+    build: ./PhotoAppApiAccountManagement
+    image: ptargino/photoapp/api-account-management
+    depends_on:
+      - discovery-service
