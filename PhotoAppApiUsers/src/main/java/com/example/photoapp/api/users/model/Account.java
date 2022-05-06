@@ -1,48 +1,22 @@
 package com.example.photoapp.api.users.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@NoArgsConstructor
+@ToString
 public class Account {
 
 	private String id;
 	private String number;
 	private int amount;
 
-	public Account() {
-
-	}
-
 	public Account(String id, String number, int amount) {
 		this.id = id;
 		this.number = number;
 		this.amount = amount;
 	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getNumber() {
-		return number;
-	}
-
-	public void setNumber(String number) {
-		this.number = number;
-	}
-
-	public int getAmount() {
-		return amount;
-	}
-
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-
-	@Override
-	public String toString() {
-		return "Account [id=" + id + ", number=" + number + ", amount=" + amount + "]";
-	}
-
 }

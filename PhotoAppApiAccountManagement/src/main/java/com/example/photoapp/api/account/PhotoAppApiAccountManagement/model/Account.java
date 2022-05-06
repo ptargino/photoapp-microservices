@@ -1,9 +1,16 @@
 package com.example.photoapp.api.account.PhotoAppApiAccountManagement.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
+@Data
+@NoArgsConstructor
+@ToString
 public class Account {
 
     @Id
@@ -12,51 +19,10 @@ public class Account {
     private String customerId;
     private int amount;
 
-    public Account() {
-
-    }
-
     public Account(String number, String customerId, int amount) {
         this.number = number;
         this.customerId = customerId;
         this.amount = amount;
     }
 
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    public String getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    @Override
-    public String toString() {
-        return "Account [id=" + id + ", number=" + number + ", customerId=" + customerId + ", amount=" + amount + "]";
-    }
 }
